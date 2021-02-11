@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Registration</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="/bootstrap-4.0.0-dist/css/bootstrap.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -12,12 +12,14 @@
     <script src="/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
 </head>
+
+  
 <body>
 
     <div class="container">
                  <div class="tophead">
 
-                     <h2 style="text-align: center; font-size: 30px; "><b>Registration Form For Travelling Fever </b></h2>
+                     <h2 style="text-align: center; font-size: 30px; "><b>Registration Form  </b></h2>
                  </div>
              <section class="first">
              <div class="row">
@@ -25,24 +27,24 @@
                          <img src="/images/first.jpeg" width="100%" style="border-radius: 10px;">
 
                     </div>
-                
+             
                  
                  
                     <div class="col-md-6">
-                     <form action="/action_page.php" method="get" id="nameform">
-                        <form>
+                     <form  method="POST" id="nameform" name="registration"  >
+                        
                             <h2 style="text-align: center; color: #111; font-size:22px;border-bottom: 2px solid cornflowerblue;;" ><b>Personal Details</b></h2>
                             <div class="form-row">
                               <div class="col ">
                                   
                                 <label for="exampleInputEmail1"><b>First Name</b></label>
-                                <input type="text" class="form-control" placeholder="First name" id="ab" required>
+                                <input type="text" class="form-control shadow" placeholder="First name" id="f_name" name="fname" required>
                                 <div class="valid-feedback">
                                     looks good</div>
                               </div>
                               <div class="col">
                                 <label for="exampleInputEmail1"><b>Last Name</b></label>
-                                <input type="text" class="form-control" placeholder="Last name" id="ab" required><br>
+                                <input type="text" class="form-control shadow" placeholder="Last name" required ><br>
                               </div>
                             </div>
 
@@ -51,12 +53,16 @@
                             
                                 <div class="form-group">
                                   <label for="exampleInputEmail1"><b>Email address <i class="fas fa-envelope-open"></i></b></label>
-                                  <input type="email" class="form-control" id="ab" aria-describedby="emailHelp" placeholder="Enter email" id="ab" required>
+                                  <input type="text" class="form-control shadow"  aria-describedby="emailHelp" placeholder="Enter email" id="email" >
                                   <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                                 </div>
                                 <div class="form-group">
                                   <label for="exampleInputPassword1"><b>Password <i class="fas fa-unlock-alt"></i></b></label>
-                                  <input type="password" class="form-control" id="ab" placeholder="Password" required> 
+                                  <input type="password" class="form-control shadow" id="password" placeholder="Password" > 
+                                </div>
+                                <div class="form-group">
+                                  <label for="exampleInputPassword1"><b>confirm password <i class="fas fa-unlock-alt"></i></b></label>
+                                  <input type="password" class="form-control shadow" id="confirm" placeholder="Password" > 
                                 </div>
                           
  
@@ -74,13 +80,13 @@
                             <img src="/images/second.jpeg" width="100%"style="border-radius: 10px;">
                         </div>
 
-                        <div class="col-sm-6 justify-content-between">
+                        <div class="col-sm-6 justify-content-between shadow">
                             <div class="pad1">
                                 <p><b>Gender</b></p>
                                 <div class="btn-group col-sm-10 ">
                                     <input
                                       type="radio"
-                                      class="btn-check"
+                                      class="btn-check shadow"
                                       name="options"
                                       id="option1"
                                       autocomplete="off"
@@ -89,7 +95,7 @@
                                   
                                     
                                   
-                                    <label class="btn btn-secondary" for="option1" id="ab"><i class="fas fa-male"></i> Male</label>
+                                    <label class="btn btn-secondary " for="option1" id="ab"><i class="fas fa-male"></i> Male</label>
                                   
                                     <input type="radio" class="btn-check" name="options" id="option2" autocomplete="off" style="margin-left: 15px;" />
                                     <label class="btn btn-secondary" for="option2" id="ab"><i class="fas fa-female"></i>  female</label>
@@ -114,32 +120,32 @@
 
 
 
-                              <!-- Material unchecked -->
+                           
         <label for="exampleFormControlSelect1"><b>Select places where you want to visit</b></label>
         <div class="form-check" style="font-size: 18px;">
-            <input type="checkbox" class="form-check-input" id="materialUnchecked">
+            <input type="checkbox" class="form-check-input " id="materialUnchecked">
             <label class="form-check-label" for="materialUnchecked">India</label>
          </div>
   
           <div class="my-2"></div>
   
-          <!-- Material checked -->
+        
           <div class="form-check" style="font-size: 18px;">
-                <input type="checkbox" class="form-check-input" id="materialChecked" checked="">
+                <input type="checkbox" class="form-check-input " id="materialChecked" checked="">
                 <label class="form-check-label" for="materialChecked">Australia</label>
           </div>
   
           <div class="my-2"></div>
   
-          <!-- Material indeterminate -->
+  
           <div class="form-check" style="font-size: 18px;">
-            <input type="checkbox" class="form-check-input" id="materialIndeterminate" checked="">
+            <input type="checkbox" class="form-check-input " id="materialIndeterminate" checked="">
             <label class="form-check-label" for="materialIndeterminate">Canada</label>
           </div>
   
           <div class="my-2"></div>
   
-          <!-- Material unchecked disabled -->
+       
           <div class="form-check" style="font-size: 18px;">
             <input type="checkbox" class="form-check-input" id="materialUncheckedDisabled" disabled="">
             <label class="form-check-label disabled" for="materialUncheckedDisabled">Pakistan</label>
@@ -164,7 +170,7 @@
                         <div class="col-md-6 text-center">
                             <div class="form-group">
                                 <label for="comment" style="font-size: 18px;"><b>Description of Your last visit:</b></label>
-                                <textarea class="form-control" rows="5" id="ab"></textarea>
+                                <textarea class="form-control shadow" rows="5" id="txt"></textarea>
                               </div>
 
                               
@@ -176,15 +182,15 @@
 
                               <div class="form-group">
                                 <label for="inputAddress">Permanent Address</label>
-                                <input type="text" class="form-control" id="ab" placeholder="1234 Main St">
+                                <input type="text" class="form-control shadow" id="ab" placeholder="1234 Main St" required>
                               </div>
                               <div class="form-group">
                                 <label for="inputAddress2">Correspondence Address</label>
-                                <input type="text" class="form-control" id="ab" placeholder="Apartment, studio, or floor">
+                                <input type="text" class="form-control shadow" id="ab" placeholder="Apartment, studio, or floor" required>
                               </div>
                               <div class="form-group col-md-4">
                                 <label for="inputState" >State</label>
-                                <select id="inputState" class="form-control">
+                                <select id="inputState" class="form-control shadow">
                                   <option selected id="">Choose...</option>
                                   <option>Uttrakhand</option>
                                   <option>Uttarpradesh</option>
@@ -203,44 +209,20 @@
 
                     <div class="col-md-6 ">
                         
-                        <div class="form-group row text-white bc text-align:center;" style="text-align: center; ">
-                            <label for="example-datetime-local-input" class="col-2 col-form-label" id="ab" style="color:black;">Date of Arrival</label>
-                            <div class="col-10">
-                              <input class="form-control" type="datetime-local" value="2011-08-19T13:45:00" id="ab">
-                            </div>
-                          </div>
+                       
+
+                          
                          
-                        <div class="form-group row text-white bc"  style="text-align: center;">
-                            <label for="example-datetime-local-input" class="col-2 col-form-label" id="ab" style="color: black;">Date of Departure</label>
-                            <div class="col-10">
-                              <input class="form-control" type="datetime-local" value="2011-08-19T13:45:00" id="ab">
-                            </div>
-                          </div>
-
-
-                          
-                          <form class="form-inline ">
-                            <label class="sr-only" for="inlineFormInputName2">Name</label>
-                            <input type="text" class="form-control mb-2 mr-sm-2" id="ab" placeholder="user name">
-                          
-                            <label class="sr-only" for="inlineFormInputGroupUsername2">Username</label>
-                            <div class="input-group mb-2 mr-sm-2">
-                              <div class="input-group-prepend">
-                                <div class="input-group-text">@</div>
-                              </div>
-                              <input type="text" class="form-control" id="" placeholder="Username">
-                            </div>
                         
                         
-                        
-                          <div class="form-group">
+                          <div class="form-group" style="padding-top: 30px;">
                             <label for="exampleFormControlFile1" style="font-size: 18px;">Upload your Image here</label>
-                            <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                            <input type="file" class="form-control-file shadow" id="exampleFormControlFile1">
                           </div>
 
                           <div class="form-group">
                             <div class="form-check">
-                              <input class="form-check-input" type="checkbox" id="gridCheck">
+                              <input class="form-check-input shadow" type="checkbox" id="gridCheck">
                               <label class="form-check-label" for="gridCheck">
                                 Check me out
                               </label>
@@ -251,14 +233,12 @@
                           <div class="container">
                             <span id="rateMe2"  class="empty-stars"></span>
                           </div>
-                          
-                          <!-- rating.js file -->
-                          <script src="js/addons/rating.js"></script>
+                         
                     </div>
                 </div>
             </section>
             <div class="last text-center">
-                <button type="submit" class="btn btn-primary">SUBMIT FORM</button>
+                <button type="submit" class="btn btn-primary btn1" onclick="validateForm()">SUBMIT FORM</button>
             </div>
 
          </div>
@@ -267,5 +247,9 @@
 
 
     </div>
+
+
+
+    <script src="/form1.js"></script>
 </body>
 </html>
